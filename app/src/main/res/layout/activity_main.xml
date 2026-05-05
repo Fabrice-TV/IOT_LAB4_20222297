@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:paddingHorizontal="24dp"
+        android:paddingTop="48dp"
+        android:paddingBottom="32dp">
+
+        <!-- Nombre de la aplicación -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            android:textColor="@color/primary"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Descubre recetas del mundo"
+            android:textSize="14sp"
+            android:textColor="@color/text_secondary"
+            android:layout_marginBottom="32dp"/>
+
+        <!-- Imagen gastronómica 1: cubiertos -->
+        <ImageView
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:src="@drawable/food_utensils"
+            android:contentDescription="Cubiertos"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Imagen gastronómica 2: bowl/taza -->
+        <ImageView
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:src="@drawable/food_bowl"
+            android:contentDescription="Bowl de comida"
+            android:layout_marginBottom="40dp"/>
+
+        <!-- Botón Ingresar → redirige a AppActivity -->
+        <Button
+            android:id="@+id/btnIngresar"
+            android:layout_width="220dp"
+            android:layout_height="56dp"
+            android:text="@string/ingresar"
+            android:textSize="16sp"
+            android:layout_marginBottom="48dp"/>
+
+        <!-- Elaborado por: Nombre/Código -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/elaborado_por"
+            android:textSize="12sp"
+            android:textColor="@color/text_secondary"/>
+
+    </LinearLayout>
+</ScrollView>

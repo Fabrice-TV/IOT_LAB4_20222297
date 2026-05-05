@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">GastroApp</string>
+    <string name="ingresar">Ingresar</string>
+    <string name="elaborado_por">Elaborado por: Fabricio Tirado / 20222297</string>
+    <string name="categories">Categorías</string>
+    <string name="meals">Platos</string>
+    <string name="recipe">Receta</string>
+    <string name="search_by_ingredient">Buscar por ingrediente (ej. chicken_breast)</string>
+    <string name="buscar">Buscar</string>
+    <string name="meal_id_placeholder">Ingresa el ID del plato</string>
+    <string name="no_internet_title">Sin conexión a Internet</string>
+    <string name="no_internet_message">No hay conexión a Internet. Active su conexión para continuar.</string>
+    <string name="configuracion">Configuración</string>
+    <string name="cancelar">Cancelar</string>
+</resources>

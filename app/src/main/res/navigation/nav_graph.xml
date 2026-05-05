@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/categoriesFragment">
+
+    <fragment
+        android:id="@+id/categoriesFragment"
+        android:name="com.example.lab4_iot_20222297.fragment.CategoriesFragment"
+        android:label="Categorías">
+        <!-- Navega a Meals pasando el nombre de categoría seleccionada -->
+        <action
+            android:id="@+id/action_categories_to_meals"
+            app:destination="@id/mealsFragment"/>
+        <!-- Navega a Recipe directamente (usado por el acelerómetro - plato sorpresa) -->
+        <action
+            android:id="@+id/action_categories_to_recipe"
+            app:destination="@id/recipeFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/mealsFragment"
+        android:name="com.example.lab4_iot_20222297.fragment.MealsFragment"
+        android:label="Platos">
+        <!-- Argumento opcional: nombre de categoría. Null si se abre por BottomNav -->
+        <argument
+            android:name="categoryName"
+            app:argType="string"
+            android:defaultValue="@null"
+            app:nullable="true"/>
+        <!-- Navega a Recipe pasando el ID del plato seleccionado -->
+        <action
+            android:id="@+id/action_meals_to_recipe"
+            app:destination="@id/recipeFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/recipeFragment"
+        android:name="com.example.lab4_iot_20222297.fragment.RecipeFragment"
+        android:label="Receta">
+        <!-- Argumento opcional: ID del plato. Null si se abre por BottomNav o búsqueda manual -->
+        <argument
+            android:name="mealId"
+            app:argType="string"
+            android:defaultValue="@null"
+            app:nullable="true"/>
+    </fragment>
+
+</navigation>

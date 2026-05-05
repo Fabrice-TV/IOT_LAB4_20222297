@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background">
+
+    <!-- Título dinámico: "Platos" o "Platos: Beef" según el origen -->
+    <TextView
+        android:id="@+id/tvMealsTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Platos"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="@color/primary"
+        android:paddingHorizontal="16dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="8dp"/>
+
+    <!--
+        Layout de búsqueda por ingrediente.
+        Visible solo cuando el usuario llega por el BottomNav (sin categoryName).
+        Oculto cuando llega desde CategoriesFragment (ya tiene categoría).
+    -->
+    <LinearLayout
+        android:id="@+id/searchLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingHorizontal="12dp"
+        android:paddingBottom="8dp"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/etIngredient"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="@string/search_by_ingredient"
+            android:inputType="text"
+            android:imeOptions="actionSearch"
+            android:maxLines="1"/>
+
+        <Button
+            android:id="@+id/btnBuscar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/buscar"
+            android:layout_marginStart="8dp"/>
+    </LinearLayout>
+
+    <!-- RecyclerView con los platos (nombre, ID, imagen) -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewMeals"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp"
+        android:clipToPadding="false"/>
+
+</LinearLayout>
